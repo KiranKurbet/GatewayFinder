@@ -221,34 +221,8 @@ sudo gf scan -F all
 └──────────────┴────────┴──────────┴───────┴─────┴─────┴──────┴───────┘
 ```
 
----
 
-##  Project Structure
 
-```
-gateway-finder/
-├── gateway_finder/
-│   ├── __init__.py
-│   ├── cli.py                  # Click CLI — entry point (gf command)
-│   ├── core/
-│   │   ├── discovery.py        # ARP scan, routing probes, HSRP/VRRP/GLBP
-│   │   ├── fingerprint.py      # OUI, TTL, HTTP, SSL fingerprinting
-│   │   ├── scanner.py          # Port scan, SNMP, Telnet, TLS checks
-│   │   ├── monitor.py          # Real-time ICMP monitoring
-│   │   └── scoring.py          # Security/Exposure/Availability scoring
-│   ├── utils/
-│   │   └── helpers.py          # Network utilities, cross-platform helpers
-│   └── reports/
-│       └── reporter.py         # JSON / CSV / HTML export
-├── tests/
-│   └── test_discovery.py       # 35+ unit tests (no network required)
-├── Dockerfile
-├── requirements.txt
-├── setup.py
-└── README.md
-```
-
----
 
 ##  Dependency Matrix
 
