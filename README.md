@@ -1,4 +1,4 @@
-# 🛡️ GatewayFinder — Gateway Intelligence Engine
+#  GatewayFinder — Gateway Intelligence Engine
 
 <p align="center">
   <img src="https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge"/>
@@ -12,7 +12,7 @@
 
 ---
 
-## ⚠️ Legal Disclaimer
+##  Legal Disclaimer
 
 This tool is intended **exclusively for authorized security testing and network administration**.  
 Using GatewayFinder against networks you do not own or have explicit written permission to test is **illegal**.  
@@ -20,16 +20,16 @@ The author assumes no liability for misuse.
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🔍 Gateway Discovery
+###  Gateway Discovery
 - Automatic default gateway detection (cross-platform)
 - ARP-based subnet scanning (scapy or `arp -a` fallback)
 - ICMP + TCP routing probes (TTL=1 and full-path)
 - MAC address file loading (original `gateway-finder` mode)
 - Passive HSRP / VRRP / GLBP virtual gateway sniffing
 
-### 🔬 Fingerprinting
+###  Fingerprinting
 - MAC OUI → vendor identification (Cisco, Juniper, MikroTik, Fortinet, Palo Alto, Ubiquiti, Huawei, and more)
 - TTL-based OS fingerprinting (Windows / Linux / Cisco IOS / JunOS)
 - HTTP/HTTPS response analysis (server headers, page title)
@@ -37,7 +37,7 @@ The author assumes no liability for misuse.
 - Management interface URL detection
 - Cloud provider hint detection (AWS, Azure, GCP, Cloudflare)
 
-### 🔐 Security Assessment
+###  Security Assessment
 - Concurrent port scan of 20+ gateway-relevant ports
 - SNMP community string probing (v1/v2c)
 - Telnet exposure detection with banner grab
@@ -47,7 +47,7 @@ The author assumes no liability for misuse.
 - Firewall presence heuristic
 - Confirmed vulnerability list (zero false positives)
 
-### 🧠 Intelligence Scoring
+###  Intelligence Scoring
 Every discovered gateway receives:
 
 | Score | Range | Meaning |
@@ -59,14 +59,14 @@ Every discovered gateway receives:
 
 Actionable recommendations are generated for every detected issue.
 
-### 📡 Real-Time Monitoring
+###  Real-Time Monitoring
 - Continuous ICMP ping loop
 - Rolling latency statistics (avg, min, max, jitter)
 - Packet loss tracking
 - Alert callbacks for UP/DOWN transitions and high latency
 - Event log with timestamps
 
-### 📊 Reporting
+###  Reporting
 Export results as:
 - **JSON** — machine-readable, suitable for pipeline integration
 - **CSV** — spreadsheet/SIEM import
@@ -74,7 +74,7 @@ Export results as:
 
 ---
 
-## 📦 Installation
+##  Installation
 
 ### From source (recommended)
 ```bash
@@ -99,7 +99,7 @@ docker run --rm --network=host --privileged gatewayfinder scan
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 ### Full Scan (recommended)
 ```bash
@@ -186,7 +186,7 @@ sudo gf scan -F all
 
 ---
 
-## 📋 Example Output
+##  Example Output
 
 ```
  ██████╗  █████╗ ████████╗███████╗██╗    ██╗ █████╗ ██╗   ██╗
@@ -223,7 +223,7 @@ sudo gf scan -F all
 
 ---
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 gateway-finder/
@@ -250,7 +250,7 @@ gateway-finder/
 
 ---
 
-## 🔌 Dependency Matrix
+##  Dependency Matrix
 
 | Feature | Requires | Fallback |
 |---------|----------|----------|
@@ -276,7 +276,7 @@ sudo gf scan
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ```bash
 # Install dev dependencies
@@ -291,7 +291,7 @@ pytest tests/ -v --cov=gateway_finder --cov-report=term-missing
 
 ---
 
-## 🔧 Integrations
+##  Integrations
 
 ### Nmap
 ```bash
@@ -314,7 +314,7 @@ sudo gf scan -F json -o - | curl -X POST http://elastic:9200/gateways/_doc -d @-
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] Nmap integration (`--nmap` flag)
 - [ ] REST API (`gf serve --port 8080`)
@@ -327,13 +327,13 @@ sudo gf scan -F json -o - | curl -X POST http://elastic:9200/gateways/_doc -d @-
 
 ---
 
-## 📄 License
+##  License
 
 MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 👤 Author
+## Author
 
 **KiranKurbet** — Red Teamer @ Cyart Technology  
 Certifications: CPENT · CEH · CASA · APIsec Practitioner · API Security Fundamentals  
